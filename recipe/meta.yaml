@@ -20,10 +20,11 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
     - cython
     - setuptools
-    - toolchain
   run:
     - python
 
