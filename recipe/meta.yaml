@@ -1,7 +1,7 @@
 {% set name = "asyncpg" %}
-{% set version = "0.13.0" %}
+{% set version = "0.15.0" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "721c38bd67313393430c33daee913aa4528d2a4f644eab024d935c01bd909811" %}
+{% set hash_value = "b8a23279080e9f56e30b9fc1b89d8ce0782a515e82862508c8d86b86fb9b1241" %}
 
 package:
   name: {{ name|lower }}
