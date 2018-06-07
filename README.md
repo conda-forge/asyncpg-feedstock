@@ -18,14 +18,16 @@ asyncio framework.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/asyncpg-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/asyncpg-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/asyncpg-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/asyncpg-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/asyncpg-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/asyncpg-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/asyncpg-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/asyncpg-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/asyncpg-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/asyncpg-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/asyncpg-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/asyncpg-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/asyncpg/badges/version.svg)](https://anaconda.org/conda-forge/asyncpg)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/asyncpg/badges/downloads.svg)](https://anaconda.org/conda-forge/asyncpg)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-asyncpg-green.svg)](https://anaconda.org/conda-forge/asyncpg) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/asyncpg.svg)](https://anaconda.org/conda-forge/asyncpg) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/asyncpg.svg)](https://anaconda.org/conda-forge/asyncpg) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/asyncpg.svg)](https://anaconda.org/conda-forge/asyncpg) |
 
 Installing asyncpg
 ==================
