@@ -1,7 +1,6 @@
 {% set name = "asyncpg" %}
-{% set version = "0.17.0" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "adccada0bb13230360e4569b4b3eea8bb21693ffc5042275933abcb538ab3fbb" %}
+{% set version = "0.18.1" %}
+{% set sha256 = "7a00d116f6420f5a719b8d5811bb048bad1a6edadcc6ee6ccfd05b794c9b8408" %}
 
 package:
   name: {{ name|lower }}
@@ -9,21 +8,21 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  # Not using pypi URL because the source dist has incorrect C files for windows
-  url: https://github.com/MagicStack/{{ name }}/archive/v{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash_value }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: python setup.py install  --single-version-externally-managed --record=record.txt
+  number: 1000
+  script: python -m pip install --no-deps --ignore-installed .
   skip: True  # [py2k]
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
     - cython
-    - setuptools
-    - toolchain
+    - pip
   run:
     - python
 
