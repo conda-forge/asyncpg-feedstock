@@ -1,7 +1,6 @@
 {% set name = "asyncpg" %}
 {% set version = "0.18.1" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "5ea322797d4f8ec5532d72df3520f4aff39d45d033aee802b63297797b5a8b43" %}
+{% set sha256 = "7a00d116f6420f5a719b8d5811bb048bad1a6edadcc6ee6ccfd05b794c9b8408" %}
 
 package:
   name: {{ name|lower }}
@@ -9,9 +8,8 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  # Not using pypi URL because the source dist has incorrect C files for windows
-  url: https://github.com/MagicStack/{{ name }}/archive/v{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash_value }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 1000
