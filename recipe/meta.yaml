@@ -1,6 +1,6 @@
 {% set name = "asyncpg" %}
-{% set version = "0.18.3" %}
-{% set sha256 = "58a5eccaac60fd326e32683226efe1046bfea558fa043360bdd1708e0e812c67" %}
+{% set version = "0.19.0" %}
+{% set sha256 = "b253bbbe42eba8e00ad63939ff9d43a5f74e26a4e8f883de867920feb4a9e36a" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: True  # [py2k]
 
 requirements:
