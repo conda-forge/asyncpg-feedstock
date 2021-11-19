@@ -30,6 +30,10 @@ requirements:
     - typing_extensions  # [py<38]
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - asyncpg
 
