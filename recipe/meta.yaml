@@ -1,6 +1,6 @@
 {% set name = "asyncpg" %}
-{% set version = "0.26.0" %}
-{% set sha256 = "77e684a24fee17ba3e487ca982d0259ed17bae1af68006f4cf284b23ba20ea2c" %}
+{% set version = "0.27.0" %}
+{% set sha256 = "720986d9a4705dd8a40fdf172036f5ae787225036a7eb46e704c45aa8f62c054" %}
 
 package:
   name: {{ name|lower }}
