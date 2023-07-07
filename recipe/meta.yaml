@@ -27,7 +27,7 @@ requirements:
     - pip
   run:
     - python
-    - typing_extensions  # [py<38]
+    - typing_extensions >=3.7.4.3  # [py<38]
 
 test:
   requires:
