@@ -1,18 +1,16 @@
 {% set name = "asyncpg" %}
-{% set version = "0.28.0" %}
-{% set sha256 = "7252cdc3acb2f52feaa3664280d3bcd78a46bd6c10bfd681acfffefa1120e278" %}
+{% set version = "0.29.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: d1c49e1f44fffafd9a55e1a9b101590859d881d639ea2922516f5d9c512d354e
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -28,6 +26,7 @@ requirements:
   run:
     - python
     - typing_extensions >=3.7.4.3  # [py<38]
+    - async-timeout >=4.0.3
 
 test:
   requires:
