@@ -8,10 +8,16 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d1c49e1f44fffafd9a55e1a9b101590859d881d639ea2922516f5d9c512d354e
+  patches:
+    - 1101.patch
+    - 11101c6eff3abb8c734b8880f2a6bd5bc3160255.patch
 
 build:
   number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: 
+    - del asyncpg\pgproto\pgproto.c asyncpg\protocol\protocol.c  # [win]
+    - rm asyncpg/pgproto/pgproto.c asyncpg/protocol/protocol.c   # [unix]
+    - {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
