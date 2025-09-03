@@ -6,11 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: c551e9928ab6707602f44811817f82ba3c446e018bfe1d3abecc8ba5f3eac851
+  patches:
+    - 0001-Add-trailing-semicolon.patch
 
 build:
-  number: 0
+  number: 1
   script:
     - del asyncpg\pgproto\pgproto.c asyncpg\protocol\protocol.c  # [win]
     - rm asyncpg/pgproto/pgproto.c asyncpg/protocol/protocol.c   # [unix]
