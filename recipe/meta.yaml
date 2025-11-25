@@ -1,5 +1,5 @@
 {% set name = "asyncpg" %}
-{% set version = "0.30.0" %}
+{% set version = "0.31.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c551e9928ab6707602f44811817f82ba3c446e018bfe1d3abecc8ba5f3eac851
+  sha256: c989386c83940bfbd787180f2b1519415e2d3d6277a70d9d0f0145ac73500735
   patches:
     - 0001-Add-trailing-semicolon.patch
 
 build:
-  number: 1
+  number: 0
   script:
     - del asyncpg\pgproto\pgproto.c asyncpg\protocol\protocol.c  # [win]
     - rm asyncpg/pgproto/pgproto.c asyncpg/protocol/protocol.c   # [unix]
