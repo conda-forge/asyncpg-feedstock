@@ -32,7 +32,6 @@ requirements:
     - pip
   run:
     - python
-    - typing_extensions >=3.7.4.3  # [py<38]
     - async-timeout >=4.0.3
 
 test:
