@@ -11,8 +11,6 @@ package:
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: c989386c83940bfbd787180f2b1519415e2d3d6277a70d9d0f0145ac73500735
-  patches:
-    - 0001-Add-trailing-semicolon.patch
 
 build:
   number: 0
