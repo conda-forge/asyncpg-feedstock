@@ -13,7 +13,7 @@ source:
   sha256: c989386c83940bfbd787180f2b1519415e2d3d6277a70d9d0f0145ac73500735
 
 build:
-  number: 0
+  number: 1
   script:
     - if: win
       then: del asyncpg\pgproto\pgproto.c asyncpg\protocol\protocol.c
@@ -24,7 +24,7 @@ build:
 requirements:
   build:
     - if: build_platform != target_platform
-      then: 
+      then:
         - python
         - cross-python_${{ target_platform }}
         - cython
