@@ -11,9 +11,11 @@ package:
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: c989386c83940bfbd787180f2b1519415e2d3d6277a70d9d0f0145ac73500735
+  patches:
+    - patches/0001-Replace-pkg_resources-with-packaging-in-setup.py.patch
 
 build:
-  number: 1
+  number: 2
   script:
     - if: win
       then: del asyncpg\pgproto\pgproto.c asyncpg\protocol\protocol.c
@@ -34,13 +36,14 @@ requirements:
     - python
     - cython
     - setuptools
+    - packaging
     - pip
   run:
     - python
-    - async-timeout >=4.0.3
 
 tests:
   - python:
+      pip_check: true
       imports:
         - asyncpg
 
