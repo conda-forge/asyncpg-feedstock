@@ -43,6 +43,7 @@ requirements:
 
 tests:
   - python:
+      pip_check: true
       imports:
         - asyncpg
 
